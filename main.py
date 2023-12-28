@@ -65,7 +65,7 @@ pygame.init()
 clock = pygame.time.Clock()
 width, height = 800, 800
 window = pygame.display.set_mode((width, height))
-board_size = 55
+board_size = 50
 if len(sys.argv) > 1:
     board_size = int(sys.argv[1])
 pixel_width = width//board_size
