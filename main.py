@@ -58,16 +58,14 @@ def display(board):
 def user_draw():
      if pygame.mouse.get_pressed():
           x, y = pygame.mouse.get_pos()
-          print(f"{x, y = }")
           row, col = x//pixel_width, y//pixel_height
-          print(f"{row, col = }")
           board[row][col] = 1
 
 pygame.init()
 clock = pygame.time.Clock()
 width, height = 800, 800
 window = pygame.display.set_mode((width, height))
-board_size = 20
+board_size = 55
 if len(sys.argv) > 1:
     board_size = int(sys.argv[1])
 pixel_width = width//board_size
@@ -81,7 +79,7 @@ board[board_size//2-1][board_size//2] = 1
 board[board_size//2+1][board_size//2] = 1
 
 while True:
-     clock.tick(10)
+     clock.tick(7)
      for event in pygame.event.get():
           if event.type == pygame.QUIT:
                pygame.quit()
