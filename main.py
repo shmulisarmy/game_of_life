@@ -77,6 +77,8 @@ board = [[0 for _ in range(board_size)] for _ in range(board_size)]
 board[board_size//2][board_size//2] = 1
 board[board_size//2][board_size//2-1] = 1
 board[board_size//2][board_size//2+1] = 1
+board[board_size//2-1][board_size//2] = 1
+board[board_size//2+1][board_size//2] = 1
 
 while True:
      clock.tick(10)
