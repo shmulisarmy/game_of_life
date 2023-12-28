@@ -1,4 +1,4 @@
-import time, pygame
+import time, pygame, sys
 
 def get_neighbors(row_index, col_index, grid, grid_len):
     neighbor_count = 0
@@ -68,6 +68,8 @@ clock = pygame.time.Clock()
 width, height = 800, 800
 window = pygame.display.set_mode((width, height))
 board_size = 20
+if len(sys.argv) > 1:
+    board_size = int(sys.argv[1])
 pixel_width = width//board_size
 pixel_height = height//board_size
 
